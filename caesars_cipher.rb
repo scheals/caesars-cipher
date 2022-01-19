@@ -1,6 +1,9 @@
 def caesar_cipher(string, shift_factor)
-  return string if shift_factor == 0
-  shift_factor += 26 if shift_factor < 0
+  if shift_factor <= 0
+    return string if shift_factor.remainder(26) == 0
+    shift_factor = shift_factor.remainder(26) + 26 if shift_factor.remainder(26) != 0
+  else
+  end
   ciphered_string = ""
   broken_down_string = string.split(" ").map { |word| word.chars }
   shift_factor.times do
