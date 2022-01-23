@@ -1,7 +1,7 @@
 def caesar_cipher(string, shift_factor)
   if shift_factor <= 0
     return string if shift_factor.remainder(26) == 0
-    shift_factor = shift_factor.remainder(26) + 26 if shift_factor.remainder(26) != 0
+    shift_factor = shift_factor.remainder(26) + 26
   end
   shift_factor.times do
     string = string.chars.map { |char| caesar_succession(char) }.join
