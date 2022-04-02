@@ -24,5 +24,4 @@ def caesar_succession(character)
 end
 
 p caesar_cipher('I AM VERY LONG and complicated, what gives?!', 10)
-p caesar_cipher('I  NO  LONGER  FEAST  ON  ADDITIONAL  SPACES!', 1)
 p caesar_cipher(caesar_cipher('Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 3), -3)
