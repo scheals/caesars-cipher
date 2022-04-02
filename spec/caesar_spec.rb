@@ -20,4 +20,9 @@ describe '#caesar_cipher' do
     result = 'Mpsfn jqtvn epmps tju bnfu, dpotfdufuvs bejqjtdjoh fmju.'
     expect(caesar_cipher('Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 27)).to eq(result)
   end
+
+  it 'handles shift factors lower than -26' do
+    result = 'H  MN  KNMFDQ  EDZRS  NM  ZCCHSHNMZK  ROZBDR!'
+    expect(caesar_cipher('I  NO  LONGER  FEAST  ON  ADDITIONAL  SPACES!', -27)).to eq(result)
+  end
 end
